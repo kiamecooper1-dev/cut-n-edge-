@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Cut N Edge Landscaping</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Cut N Edge Landscaping | Atlanta, GA</title>
+    <link rel="stylesheet" href="/static/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -22,50 +22,72 @@
         </div>
     </nav>
 
-    <!-- PAGE HEADER -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Our Services</h1>
-            <p>Everything your lawn needs — done right, every time.</p>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Atlanta's Sharpest<br>Lawn Care Team</h1>
+            <p>Professional cutting, edging, and cleanup for homes and businesses across the Atlanta metro area.</p>
+            <a href="/contact" class="btn">Get a Free Quote</a>
         </div>
     </section>
 
-    <!-- SERVICES LIST -->
-    <section class="services-full">
+    <!-- WHY CHOOSE US -->
+    <section class="features">
         <div class="container">
-            <div class="service-card">
-                <div class="service-icon">✂</div>
-                <div class="service-info">
-                    <h3>Lawn Mowing</h3>
-                    <p>Regular mowing keeps your grass healthy and your property looking sharp. We cut at the right height for Atlanta's climate so your lawn stays thick and green.</p>
+            <h2>Why Atlanta Chooses Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="icon">📍</span>
+                    <h3>Local & Reliable</h3>
+                    <p>We are based right here in Atlanta. No late shows, no excuses — just consistent service you can count on.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">💵</span>
+                    <h3>Fair Pricing</h3>
+                    <p>No hidden fees. We give you a straight quote upfront so you always know what you are paying.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">✂</span>
+                    <h3>Clean Results</h3>
+                    <p>We do not just mow — we edge, trim, and clean up so your property always looks sharp.</p>
                 </div>
             </div>
-            <div class="service-card">
-                <div class="service-icon">📐</div>
-                <div class="service-info">
-                    <h3>Edging & Trimming</h3>
-                    <p>Clean edges along driveways, sidewalks, and flower beds make a huge difference. We trim every border so your yard has that crisp, professional finish.</p>
-                </div>
+        </div>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <section class="services-preview">
+        <div class="container">
+            <h2>What We Do</h2>
+            <div class="services-grid">
+                <div class="service-item">Lawn Mowing</div>
+                <div class="service-item">Edging & Trimming</div>
+                <div class="service-item">Leaf Cleanup</div>
+                <div class="service-item">Yard Cleanups</div>
+                <div class="service-item">Shrub Trimming</div>
+                <div class="service-item">Commercial Lots</div>
             </div>
-            <div class="service-card">
-                <div class="service-icon">🍂</div>
-                <div class="service-info">
-                    <h3>Leaf Cleanup</h3>
-                    <p>Don't let leaves pile up and suffocate your lawn. We clear them out fast so your yard stays clean through fall and winter.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🌿</div>
-                <div class="service-info">
-                    <h3>Shrub & Bush Trimming</h3>
-                    <p>Overgrown shrubs make a property look neglected. We shape and trim bushes to keep your landscaping looking intentional and well-maintained.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🧹</div>
-                <div class="service-info">
-                    <h3>Full Yard Cleanups</h3>
-                    <p>Moving in, selling, or just letting it go too long? We do full property cleanups — haul debris, clear overgrowth, and get your yard back in order.</p>
-                </div>
-            </div>
-            <div class="service-card">`
+            <a href="/services" class="btn btn-outline">See All Services</a>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready for a Cleaner Yard?</h2>
+            <p>Serving Atlanta and surrounding areas. Get your free quote today.</p>
+            <a href="/contact" class="btn">Contact Us Now</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>✂ Cut N Edge Landscaping | Atlanta, GA</p>
+            <p>© 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

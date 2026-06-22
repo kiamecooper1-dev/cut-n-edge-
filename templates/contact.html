@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Cut N Edge Landscaping</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="/static/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -39,7 +39,6 @@
                 <div class="contact-form-box">
                     <h2>Request a Quote</h2>
 
-                    <!-- This checks if Flask sent a success message -->
                     {% if success %}
                     <div class="success-message">
                         Your message was sent! We will be in touch soon.
@@ -64,7 +63,7 @@
                             <select id="service" name="service" required>
                                 <option value="">-- Select a Service --</option>
                                 <option value="Lawn Mowing">Lawn Mowing</option>
-                                <option value="Edging & Trimming">Edging and Trimming</option>
+                                <option value="Edging and Trimming">Edging and Trimming</option>
                                 <option value="Leaf Cleanup">Leaf Cleanup</option>
                                 <option value="Shrub Trimming">Shrub Trimming</option>
                                 <option value="Full Yard Cleanup">Full Yard Cleanup</option>
@@ -137,6 +136,6 @@
         </div>
     </footer>
 
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="/static/js/main.js"></script>
 </body>
 </html>
