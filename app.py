@@ -1,13 +1,22 @@
-from flask import Flask, render_template, request, redirect, url_for
-import smtplib
+from flask import Flask, render_template, request, send_from_directory
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from dotenv import load_dotenv
+import smtplib
+import os
+
+load_dotenv()
 
 app = Flask(__name__)
 
-BUSINESS_EMAIL = "cutnedgeatl@gmail.com"
-SENDER_EMAIL = "cutnedgeatl@gmail.com"
-SENDER_PASSWORD = "xtva sdfu rpdk nafz"
+# This manually serves static files on Render
+@app.route('/static/<path:filename>')
+def static_files(filename):
+    return send_from_directory('static', filename)
+
+BUSINESS_EMAIL = os.environ.get('BUSINESS_EMAIL')
+SENDER_EMAIL = os.environ.get('SENDER_EMAIL')
+SENDER_PASSWORD = os.environ.get('SENDER_PASSWORD')
 
 def send_email(name, phone, email, service, message):
     msg = MIMEMultipart()
