@@ -9,11 +9,6 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# This manually serves static files on Render
-@app.route('/static/<path:filename>')
-def static_files(filename):
-    return send_from_directory('static', filename)
-
 BUSINESS_EMAIL = os.environ.get('BUSINESS_EMAIL')
 SENDER_EMAIL = os.environ.get('SENDER_EMAIL')
 SENDER_PASSWORD = os.environ.get('SENDER_PASSWORD')
@@ -39,7 +34,8 @@ def send_email(name, phone, email, service, message):
     msg.attach(MIMEText(body, 'plain'))
 
     try:
-        server = smtplib.SMTP('smtp.gmail.com', 587)
+        # Added timeout=10 so it doesn't hang forever
+        server = smtplib.SMTP('smtp.gmail.com', 587, timeout=10)
         server.starttls()
         server.login(SENDER_EMAIL, SENDER_PASSWORD)
         server.send_message(msg)
@@ -48,6 +44,10 @@ def send_email(name, phone, email, service, message):
     except Exception as e:
         print(f"Email error: {e}")
         return False
+
+@app.route('/static/<path:filename>')
+def static_files(filename):
+    return send_from_directory('static', filename)
 
 @app.route('/')
 def home():
