@@ -4,12 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Cut N Edge Landscaping</title>
-    <link rel="stylesheet" href="/static/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; color: #1a1a1a; background-color: #ffffff; }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* NAVBAR */
+        .navbar { background-color: #0a0a0a; padding: 18px 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Oswald', sans-serif; font-size: 1.6rem; font-weight: 700; color: #4caf50; letter-spacing: 1px; }
+        .nav-links { list-style: none; display: flex; gap: 32px; }
+        .nav-links a { color: #ffffff; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.5px; transition: color 0.2s; }
+        .nav-links a:hover { color: #4caf50; }
+
+        /* PAGE HEADER */
+        .page-header { background: linear-gradient(135deg, #0a0a0a 0%, #1b2e1b 100%); padding: 80px 20px; text-align: center; color: #ffffff; }
+        .page-header h1 { font-size: 3rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+        .page-header p { font-size: 1.1rem; color: #cccccc; }
+
+        /* BUTTONS */
+        .btn { display: inline-block; background-color: #4caf50; color: #ffffff; padding: 14px 36px; font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; border: none; cursor: pointer; transition: background-color 0.2s, transform 0.1s; }
+        .btn:hover { background-color: #388e3c; transform: translateY(-2px); }
+
+        /* CONTACT */
+        .contact-section { padding: 90px 20px; background-color: #f9f9f9; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+        .contact-form-box, .contact-info-box { background: #ffffff; padding: 44px 36px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .contact-form-box h2, .contact-info-box h2 { font-size: 1.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 28px; border-bottom: 3px solid #4caf50; padding-bottom: 12px; }
+
+        /* FORM */
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; color: #333; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border: 2px solid #e0e0e0; font-family: 'Open Sans', sans-serif; font-size: 0.95rem; color: #1a1a1a; background-color: #fafafa; outline: none; transition: border-color 0.2s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #4caf50; background-color: #ffffff; }
+        .form-group textarea { resize: vertical; }
+
+        /* SUCCESS */
+        .success-message { background-color: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px 20px; margin-bottom: 24px; font-size: 0.95rem; color: #2e7d32; }
+
+        /* CONTACT INFO */
+        .info-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
+        .info-icon { font-size: 1.5rem; min-width: 36px; }
+        .info-item strong { display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .info-item p { font-size: 0.95rem; color: #555; line-height: 1.6; }
+
+        /* SERVICE AREA */
+        .service-area-box { background-color: #0a0a0a; padding: 28px; margin-top: 12px; }
+        .service-area-box h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; color: #4caf50; margin-bottom: 16px; }
+        .service-area-box ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .service-area-box ul li { color: #cccccc; font-size: 0.9rem; padding-left: 12px; border-left: 2px solid #4caf50; }
+
+        /* FOOTER */
+        .footer { background-color: #0a0a0a; color: #888; text-align: center; padding: 30px 20px; font-size: 0.85rem; line-height: 2; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">✂ Cut N Edge</div>
@@ -22,7 +81,6 @@
         </div>
     </nav>
 
-    <!-- PAGE HEADER -->
     <section class="page-header">
         <div class="container">
             <h1>Get a Free Quote</h1>
@@ -30,12 +88,10 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section class="contact-section">
         <div class="container">
             <div class="contact-grid">
 
-                <!-- FORM -->
                 <div class="contact-form-box">
                     <h2>Request a Quote</h2>
 
@@ -79,7 +135,6 @@
                     </form>
                 </div>
 
-                <!-- CONTACT INFO -->
                 <div class="contact-info-box">
                     <h2>Contact Info</h2>
                     <div class="info-item">
@@ -128,7 +183,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <p>✂ Cut N Edge Landscaping | Atlanta, GA</p>
@@ -136,6 +190,5 @@
         </div>
     </footer>
 
-    <script src="/static/js/main.js"></script>
 </body>
 </html>

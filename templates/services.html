@@ -3,13 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cut N Edge Landscaping | Atlanta, GA</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Services | Cut N Edge Landscaping</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; color: #1a1a1a; background-color: #ffffff; }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* NAVBAR */
+        .navbar { background-color: #0a0a0a; padding: 18px 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Oswald', sans-serif; font-size: 1.6rem; font-weight: 700; color: #4caf50; letter-spacing: 1px; }
+        .nav-links { list-style: none; display: flex; gap: 32px; }
+        .nav-links a { color: #ffffff; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.5px; transition: color 0.2s; }
+        .nav-links a:hover { color: #4caf50; }
+
+        /* PAGE HEADER */
+        .page-header { background: linear-gradient(135deg, #0a0a0a 0%, #1b2e1b 100%); padding: 80px 20px; text-align: center; color: #ffffff; }
+        .page-header h1 { font-size: 3rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+        .page-header p { font-size: 1.1rem; color: #cccccc; }
+
+        /* BUTTONS */
+        .btn { display: inline-block; background-color: #4caf50; color: #ffffff; padding: 14px 36px; font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; border: none; cursor: pointer; transition: background-color 0.2s, transform 0.1s; }
+        .btn:hover { background-color: #388e3c; transform: translateY(-2px); }
+
+        /* SERVICES FULL */
+        .services-full { padding: 80px 20px; background-color: #f9f9f9; }
+        .service-card { display: flex; align-items: flex-start; gap: 28px; background: #ffffff; padding: 36px; margin-bottom: 24px; border-left: 5px solid #4caf50; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s; }
+        .service-card:hover { transform: translateX(6px); }
+        .service-icon { font-size: 2.2rem; min-width: 50px; text-align: center; }
+        .service-info h3 { font-size: 1.4rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+        .service-info p { font-size: 0.95rem; color: #555; line-height: 1.7; }
+
+        /* CTA */
+        .cta { background: linear-gradient(135deg, #1b2e1b 0%, #0a0a0a 100%); padding: 90px 20px; text-align: center; color: #ffffff; }
+        .cta h2 { font-size: 2.6rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+        .cta p { font-size: 1.05rem; color: #cccccc; margin-bottom: 36px; }
+
+        /* FOOTER */
+        .footer { background-color: #0a0a0a; color: #888; text-align: center; padding: 30px 20px; font-size: 0.85rem; line-height: 2; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2rem; }
+            .service-card { flex-direction: column; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">✂ Cut N Edge</div>
@@ -22,65 +66,68 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Atlanta's Sharpest<br>Lawn Care Team</h1>
-            <p>Professional cutting, edging, and cleanup for homes and businesses across the Atlanta metro area.</p>
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Everything your lawn needs — done right, every time.</p>
+        </div>
+    </section>
+
+    <section class="services-full">
+        <div class="container">
+            <div class="service-card">
+                <div class="service-icon">✂</div>
+                <div class="service-info">
+                    <h3>Lawn Mowing</h3>
+                    <p>Regular mowing keeps your grass healthy and your property looking sharp. We cut at the right height for Atlanta's climate so your lawn stays thick and green.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📐</div>
+                <div class="service-info">
+                    <h3>Edging & Trimming</h3>
+                    <p>Clean edges along driveways, sidewalks, and flower beds make a huge difference. We trim every border so your yard has that crisp, professional finish.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🍂</div>
+                <div class="service-info">
+                    <h3>Leaf Cleanup</h3>
+                    <p>Do not let leaves pile up and suffocate your lawn. We clear them out fast so your yard stays clean through fall and winter.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌿</div>
+                <div class="service-info">
+                    <h3>Shrub & Bush Trimming</h3>
+                    <p>Overgrown shrubs make a property look neglected. We shape and trim bushes to keep your landscaping looking intentional and well-maintained.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧹</div>
+                <div class="service-info">
+                    <h3>Full Yard Cleanups</h3>
+                    <p>Moving in, selling, or just letting it go too long? We do full property cleanups — haul debris, clear overgrowth, and get your yard back in order.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <div class="service-info">
+                    <h3>Commercial Properties</h3>
+                    <p>We service commercial lots, apartment complexes, and business fronts across Atlanta. First impressions matter — we keep your business looking professional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Need a Quote?</h2>
+            <p>Tell us about your property and we will get back to you fast.</p>
             <a href="/contact" class="btn">Get a Free Quote</a>
         </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
-    <section class="features">
-        <div class="container">
-            <h2>Why Atlanta Chooses Us</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <span class="icon">📍</span>
-                    <h3>Local & Reliable</h3>
-                    <p>We are based right here in Atlanta. No late shows, no excuses — just consistent service you can count on.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="icon">💵</span>
-                    <h3>Fair Pricing</h3>
-                    <p>No hidden fees. We give you a straight quote upfront so you always know what you are paying.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="icon">✂</span>
-                    <h3>Clean Results</h3>
-                    <p>We do not just mow — we edge, trim, and clean up so your property always looks sharp.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES PREVIEW -->
-    <section class="services-preview">
-        <div class="container">
-            <h2>What We Do</h2>
-            <div class="services-grid">
-                <div class="service-item">Lawn Mowing</div>
-                <div class="service-item">Edging & Trimming</div>
-                <div class="service-item">Leaf Cleanup</div>
-                <div class="service-item">Yard Cleanups</div>
-                <div class="service-item">Shrub Trimming</div>
-                <div class="service-item">Commercial Lots</div>
-            </div>
-            <a href="/services" class="btn btn-outline">See All Services</a>
-        </div>
-    </section>
-
-    <!-- CALL TO ACTION -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready for a Cleaner Yard?</h2>
-            <p>Serving Atlanta and surrounding areas. Get your free quote today.</p>
-            <a href="/contact" class="btn">Contact Us Now</a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <p>✂ Cut N Edge Landscaping | Atlanta, GA</p>
@@ -88,6 +135,5 @@
         </div>
     </footer>
 
-    <script src="/static/js/main.js"></script>
 </body>
 </html>

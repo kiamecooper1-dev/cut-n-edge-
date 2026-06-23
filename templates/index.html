@@ -4,12 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cut N Edge Landscaping | Atlanta, GA</title>
-    <link rel="stylesheet" href="/static/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; color: #1a1a1a; background-color: #ffffff; }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* NAVBAR */
+        .navbar { background-color: #0a0a0a; padding: 18px 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Oswald', sans-serif; font-size: 1.6rem; font-weight: 700; color: #4caf50; letter-spacing: 1px; }
+        .nav-links { list-style: none; display: flex; gap: 32px; }
+        .nav-links a { color: #ffffff; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.5px; transition: color 0.2s; }
+        .nav-links a:hover { color: #4caf50; }
+
+        /* HERO */
+        .hero { background: linear-gradient(135deg, #0a0a0a 0%, #1b2e1b 100%); min-height: 88vh; display: flex; align-items: center; padding: 80px 20px; }
+        .hero-content { max-width: 700px; margin: 0 auto; text-align: center; }
+        .hero-content h1 { font-size: 4rem; font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero-content p { font-size: 1.15rem; color: #cccccc; margin-bottom: 36px; line-height: 1.7; }
+
+        /* BUTTONS */
+        .btn { display: inline-block; background-color: #4caf50; color: #ffffff; padding: 14px 36px; font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; border: none; cursor: pointer; transition: background-color 0.2s, transform 0.1s; }
+        .btn:hover { background-color: #388e3c; transform: translateY(-2px); }
+        .btn-outline { background-color: transparent; border: 2px solid #4caf50; color: #4caf50; margin-top: 32px; }
+        .btn-outline:hover { background-color: #4caf50; color: #ffffff; }
+
+        /* FEATURES */
+        .features { padding: 90px 20px; background-color: #f9f9f9; text-align: center; }
+        .features h2 { font-size: 2.4rem; text-transform: uppercase; margin-bottom: 50px; letter-spacing: 1px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; max-width: 1100px; margin: 0 auto; }
+        .feature-card { background: #ffffff; padding: 40px 28px; border-bottom: 4px solid #4caf50; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .feature-card .icon { font-size: 2.2rem; display: block; margin-bottom: 16px; }
+        .feature-card h3 { font-size: 1.3rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .feature-card p { font-size: 0.95rem; color: #555; line-height: 1.7; }
+
+        /* SERVICES PREVIEW */
+        .services-preview { padding: 90px 20px; text-align: center; background-color: #ffffff; }
+        .services-preview h2 { font-size: 2.4rem; text-transform: uppercase; margin-bottom: 50px; letter-spacing: 1px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .service-item { background-color: #0a0a0a; color: #ffffff; font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 28px 16px; border-left: 4px solid #4caf50; transition: background-color 0.2s; }
+        .service-item:hover { background-color: #4caf50; }
+
+        /* CTA */
+        .cta { background: linear-gradient(135deg, #1b2e1b 0%, #0a0a0a 100%); padding: 90px 20px; text-align: center; color: #ffffff; }
+        .cta h2 { font-size: 2.6rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+        .cta p { font-size: 1.05rem; color: #cccccc; margin-bottom: 36px; }
+
+        /* FOOTER */
+        .footer { background-color: #0a0a0a; color: #888; text-align: center; padding: 30px 20px; font-size: 0.85rem; line-height: 2; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.6rem; }
+            .nav-links { gap: 16px; }
+            .features h2, .services-preview h2, .cta h2 { font-size: 1.8rem; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">✂ Cut N Edge</div>
@@ -22,7 +78,6 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
             <h1>Atlanta's Sharpest<br>Lawn Care Team</h1>
@@ -31,7 +86,6 @@
         </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
     <section class="features">
         <div class="container">
             <h2>Why Atlanta Chooses Us</h2>
@@ -55,7 +109,6 @@
         </div>
     </section>
 
-    <!-- SERVICES PREVIEW -->
     <section class="services-preview">
         <div class="container">
             <h2>What We Do</h2>
@@ -71,7 +124,6 @@
         </div>
     </section>
 
-    <!-- CALL TO ACTION -->
     <section class="cta">
         <div class="container">
             <h2>Ready for a Cleaner Yard?</h2>
@@ -80,7 +132,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <p>✂ Cut N Edge Landscaping | Atlanta, GA</p>
@@ -88,6 +139,5 @@
         </div>
     </footer>
 
-    <script src="/static/js/main.js"></script>
 </body>
 </html>

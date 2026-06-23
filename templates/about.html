@@ -4,12 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Cut N Edge Landscaping</title>
-    <link rel="stylesheet" href="/static/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; color: #1a1a1a; background-color: #ffffff; }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* NAVBAR */
+        .navbar { background-color: #0a0a0a; padding: 18px 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Oswald', sans-serif; font-size: 1.6rem; font-weight: 700; color: #4caf50; letter-spacing: 1px; }
+        .nav-links { list-style: none; display: flex; gap: 32px; }
+        .nav-links a { color: #ffffff; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.5px; transition: color 0.2s; }
+        .nav-links a:hover { color: #4caf50; }
+
+        /* PAGE HEADER */
+        .page-header { background: linear-gradient(135deg, #0a0a0a 0%, #1b2e1b 100%); padding: 80px 20px; text-align: center; color: #ffffff; }
+        .page-header h1 { font-size: 3rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+        .page-header p { font-size: 1.1rem; color: #cccccc; }
+
+        /* BUTTONS */
+        .btn { display: inline-block; background-color: #4caf50; color: #ffffff; padding: 14px 36px; font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; border: none; cursor: pointer; transition: background-color 0.2s, transform 0.1s; }
+        .btn:hover { background-color: #388e3c; transform: translateY(-2px); }
+
+        /* ABOUT */
+        .about-section { padding: 90px 20px; background-color: #ffffff; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-text h2 { font-size: 2.2rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+        .about-text p { font-size: 0.97rem; color: #555; line-height: 1.8; margin-bottom: 16px; }
+        .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .stat-box { background-color: #0a0a0a; padding: 36px 20px; text-align: center; border-bottom: 4px solid #4caf50; }
+        .stat-number { display: block; font-family: 'Oswald', sans-serif; font-size: 2.4rem; font-weight: 700; color: #4caf50; margin-bottom: 8px; }
+        .stat-label { display: block; font-size: 0.8rem; color: #aaaaaa; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* VALUES */
+        .values-section { padding: 90px 20px; background-color: #f9f9f9; text-align: center; }
+        .values-section h2 { font-size: 2.4rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 50px; }
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; max-width: 1100px; margin: 0 auto; }
+        .value-card { background: #ffffff; padding: 40px 28px; border-bottom: 4px solid #4caf50; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .value-icon { font-size: 2.2rem; display: block; margin-bottom: 16px; }
+        .value-card h3 { font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+        .value-card p { font-size: 0.95rem; color: #555; line-height: 1.7; }
+
+        /* CTA */
+        .cta { background: linear-gradient(135deg, #1b2e1b 0%, #0a0a0a 100%); padding: 90px 20px; text-align: center; color: #ffffff; }
+        .cta h2 { font-size: 2.6rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+        .cta p { font-size: 1.05rem; color: #cccccc; margin-bottom: 36px; }
+
+        /* FOOTER */
+        .footer { background-color: #0a0a0a; color: #888; text-align: center; padding: 30px 20px; font-size: 0.85rem; line-height: 2; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">✂ Cut N Edge</div>
@@ -22,7 +77,6 @@
         </div>
     </nav>
 
-    <!-- PAGE HEADER -->
     <section class="page-header">
         <div class="container">
             <h1>About Us</h1>
@@ -30,7 +84,6 @@
         </div>
     </section>
 
-    <!-- ABOUT CONTENT -->
     <section class="about-section">
         <div class="container">
             <div class="about-grid">
@@ -63,7 +116,6 @@
         </div>
     </section>
 
-    <!-- VALUES -->
     <section class="values-section">
         <div class="container">
             <h2>How We Work</h2>
@@ -87,7 +139,6 @@
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="cta">
         <div class="container">
             <h2>Ready to Work Together?</h2>
@@ -96,7 +147,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <p>✂ Cut N Edge Landscaping | Atlanta, GA</p>
@@ -104,6 +154,5 @@
         </div>
     </footer>
 
-    <script src="/static/js/main.js"></script>
 </body>
 </html>
